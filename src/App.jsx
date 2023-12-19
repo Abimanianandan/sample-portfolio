@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Card from './components/Card'
 function App() {
   let data=[
     {
@@ -37,19 +37,10 @@ function App() {
   <div className="row">
     {
       data.map((e,i)=>{
-        return <div class="col-lg-4 col-sm-6 mb-4" key={i}>
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt=""/></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">{e.tittle}</a>
-            </h4>
-            <p class="card-text">{e.description}</p>
-          </div>
-        </div>
-      </div>
+        return  <Card cardData={e} key={i}/>
+        
       })
-    } 
+   }
   </div>    
   </div>  
   </>
